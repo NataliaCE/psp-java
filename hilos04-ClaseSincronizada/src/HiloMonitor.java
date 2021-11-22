@@ -15,7 +15,7 @@ public class HiloMonitor implements Runnable {
 		while(true) {
 			synchronized (lista) {
 				try {
-					lista.wait();
+					lista.wait(); //Se queda esperando hasta que tenga acceso exclusivo a lista(hasta que le notifique lista en Principal)
 					System.out.println(lista);
 					Thread.sleep(100);
 				} catch (InterruptedException e) {
