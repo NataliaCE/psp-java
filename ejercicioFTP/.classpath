@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/alumno/git/psp-java/conexionFTP/librerias/commons-net-3.8.0.jar" sourcepath="/home/alumno/Escritorio/commons-net-3.8.0/commons-net-3.8.0.jar"/>
+	<classpathentry kind="lib" path="libreria/commons-net-3.8.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -13,7 +13,7 @@ public class Cliente {
 		
 		cliente.connect("localhost");
 		
-		boolean conectado = cliente.login("uftp", "hola");
+		boolean conectado = cliente.login("uftp", "alumno"); // clase --> hola || casa --> alumno
 		if(conectado) {
 			System.out.println("Conexión correcta!");
 			FTPFile[] carpetas = cliente.listDirectories();
