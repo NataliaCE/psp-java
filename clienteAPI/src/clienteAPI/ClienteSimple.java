@@ -13,6 +13,7 @@ import java.util.Calendar;
 import org.apache.hc.core5.net.URIBuilder;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class ClienteSimple {
 
@@ -77,8 +78,18 @@ public class ClienteSimple {
 		
 		//System.out.println(respuestaDatos.body());
 		
-		DatosEstacion[] datosAlmudevar = gson.fromJson(respuestaDatos.body(), DatosEstacion[].class);
-		System.out.println(datosAlmudevar);
+		//DatosEstacion[] datosAlmudevar = gson.fromJson(respuestaDatos.body(), DatosEstacion[].class);
+		//System.out.println(datosAlmudevar);
+		
+		System.out.println(respuestaDatos.body());
+		Gson gson2 = new GsonBuilder()
+				.setDateFormat("yyyy-MM-dd'T'hh:mm:ss")
+				.create();
+		DatosEstacion[] datosAlmudevar = 
+				gson2.fromJson(respuestaDatos.body(), DatosEstacion[].class);
+		for(DatosEstacion datosEstacion : datosAlmudevar) {
+			System.out.println(datosEstacion);
+		}
 	}
 
 }
